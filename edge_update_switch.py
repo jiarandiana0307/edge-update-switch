@@ -27,7 +27,8 @@ def get_update_program_paths():
     """
     os_and_update_program_paths = {
         'win32': [
-            os.path.join(os.getenv('SystemDrive', 'C:'), '\\Program Files (x86)\\Microsoft')
+            os.path.join(os.getenv('SystemDrive', 'C:'), '\\Program Files (x86)\\Microsoft'),
+            os.path.expanduser('~\\AppData\\Local\\Microsoft\\EdgeUpdate')
         ],
         'darwin': [
             '/Library/Application Support/Microsoft', 
